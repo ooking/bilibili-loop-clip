@@ -1,6 +1,6 @@
 // ==UserScript==
-// @name         Bilibili Loop Clip
 // @name:zh-CN   Bilibili 循环片段
+// @name         Bilibili Loop Clip
 // @name:zh-TW   Bilibili 循環片段
 // @name:en      Bilibili Loop Clip
 // @namespace    https://github.com/ooking/bilibili-loop-clip

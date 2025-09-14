@@ -101,6 +101,7 @@
     if (player) player.pause();
 
     const btn = document.querySelector('.bl-loop-btn');
+    const btnText = btn ? btn.querySelector('span') : null;
     let top = 80, left = window.innerWidth / 2;
     if (btn) {
       const rect = btn.getBoundingClientRect();
@@ -281,6 +282,8 @@
       loopCount = 0;
       player.currentTime = parseTime(inputStart.value);
       player.play();
+      // 按钮文字变绿色
+      if (btnText) btnText.style.color = '#43d15d';
       loopHandler = function() {
         const start = parseTime(inputStart.value);
         const end = parseTime(inputEnd.value);
@@ -311,6 +314,8 @@
       if (loopHandler) player.removeEventListener('timeupdate', loopHandler);
       loopHandler = null;
       player.pause();
+      // 恢复按钮文字颜色
+      if (btnText) btnText.style.color = '#00a1d6';
     }
     btnLoopPlay.onclick = startLoopPlay;
     btnLoopPause.onclick = stopLoopPlay;
